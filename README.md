@@ -1,16 +1,16 @@
-# metalsmith-webpack
+# metalsmith-webpack [![Build Status][travis-badge]][travis]
 
-[![Build Status](https://travis-ci.org/christophercliff/metalsmith-webpack.png?branch=master)](https://travis-ci.org/christophercliff/metalsmith-webpack)
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-A [webpack][webpack] plugin for [Metalsmith][metalsmith].
+A [webpack][] plugin for [Metalsmith][].
 
-## Installation
+## install
 
 ```
-npm install metalsmith-webpack
+npm install elliottsj/metalsmith-webpack
 ```
 
-## Usage
+## usage
 
 ```js
 var webpack = require('metalsmith-webpack')
@@ -20,38 +20,39 @@ Metalsmith(__dirname)
   .build()
 ```
 
-### Options
+### options
 
-See the [webpack configuration][webpack configuration] documentation for details.
+See the [webpack configuration][] documentation for details.
 
-## Example
+## example
 
 ```js
 Metalsmith(__dirname)
   .use(webpack({
-    context: path.resolve(__dirname, './src/js/'),
-    entry: './index.js',
+    entry: './src/index.js',
     output: {
-      path: '/js',
+      path: path.resolve(__dirname, './build/'),
       filename: 'bundle.js'
     }
   }))
   .build()
 ```
 
-See the [tests][tests] for more examples.
+See the [tests][] for more examples.
 
-## Tests
+## tests
 
 ```
 $ npm test
 ```
 
-## License
+## license
 
-MIT License, see [LICENSE](https://github.com/christophercliff/metalsmith-webpack/blob/master/LICENSE.md) for details.
+MIT License, see [LICENSE](https://github.com/elliottsj/metalsmith-webpack/blob/master/LICENSE.md) for details.
 
+[travis]: https://travis-ci.org/elliottsj/metalsmith-webpack
+[travis-badge]: https://travis-ci.org/elliottsj/metalsmith-webpack.svg?branch=master
 [metalsmith]: http://www.metalsmith.io/
-[tests]: https://github.com/christophercliff/metalsmith-webpack/blob/master/test/index.js
+[tests]: https://github.com/elliottsj/metalsmith-webpack/blob/master/test/index.js
 [webpack]: http://webpack.github.io/
 [webpack configuration]: http://webpack.github.io/docs/configuration.html
