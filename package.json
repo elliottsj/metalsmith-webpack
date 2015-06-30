@@ -18,6 +18,10 @@
     "build": "babel lib --out-dir dist",
     "test": "standard && ./node_modules/.bin/mocha -r should --reporter spec"
   },
+  "engines": {
+    "node": ">=0.10",
+    "npm": "^2.0.0"
+  },
   "dependencies": {
     "memory-fs": "^0.2.0",
     "webpack": "^1.4.13"
