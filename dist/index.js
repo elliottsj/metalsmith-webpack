@@ -25,9 +25,7 @@ var _webpack2 = _interopRequireDefault(_webpack);
 
 function plugin(config) {
   var compiler = (0, _webpack2['default'])(config);
-  var files = {};
-  var fs = new _memoryFs2['default'](files);
-  compiler.outputFileSystem = new _memoryFs2['default'](files);
+  compiler.outputFileSystem = new _memoryFs2['default']();
   return function (files, metalsmith, done) {
     compiler.run(function (err, stats) {
       if (err) {
@@ -40,11 +38,11 @@ function plugin(config) {
         return;
       }
       console.log(info);
-      fs.readdirSync(config.output.path).forEach(function (file) {
+      compiler.outputFileSystem.readdirSync(config.output.path).forEach(function (file) {
         var filePath = _path2['default'].join(config.output.path, file);
-        var key = getMetalsmithKey(files, filePath) || filePath;
+        var key = _path2['default'].relative(metalsmith.destination(), filePath);
         files[key] = {
-          contents: fs.readFileSync(filePath)
+          contents: compiler.outputFileSystem.readFileSync(filePath)
         };
       });
       return done();
@@ -54,19 +52,5 @@ function plugin(config) {
 
 function useColors() {
   return _tty2['default'].isatty(1 /* stdout */);
-}
-
-function getMetalsmithKey(files, p) {
-  p = normalizePath(p);
-  for (var key in files) {
-    if (normalizePath(key) === p) return key;
-  }
-  return null;
-}
-
-function normalizePath(p) {
-  return p.split(_path2['default'].sep).filter(function (p) {
-    return typeof p === 'string' && p.length > 0;
-  }).join('/');
 }
 module.exports = exports['default'];
