@@ -13,10 +13,10 @@
     "url": "http://github.com/christophercliff/metalsmith-webpack"
   },
   "license": "MIT",
-  "main": "./lib/",
+  "main": "dist/index.js",
   "scripts": {
-    "style": "./node_modules/.bin/crispy ./lib/ ./test/*.js",
-    "test": "npm run style && ./node_modules/.bin/mocha -r should --reporter spec"
+    "build": "babel lib --out-dir dist",
+    "test": "standard && ./node_modules/.bin/mocha -r should --reporter spec"
   },
   "dependencies": {
     "memory-fs": "^0.2.0",
@@ -24,9 +24,13 @@
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
-    "crispy": "^2.0.0",
+    "babel": "^5.6.14",
     "metalsmith": "^1.0.1",
     "mocha": "^2.0.1",
-    "should": "^4.3.0"
+    "should": "^4.3.0",
+    "standard": "^4.4.1"
+  },
+  "standard": {
+    "parser": "babel-eslint"
   }
 }
