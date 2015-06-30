@@ -19,7 +19,7 @@
     "test": "npm run style && ./node_modules/.bin/mocha -r should --reporter spec"
   },
   "dependencies": {
-    "enhanced-resolve": "^0.7.6",
+    "memory-fs": "^0.2.0",
     "webpack": "^1.4.13"
   },
   "devDependencies": {
