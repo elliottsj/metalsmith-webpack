@@ -1,4 +1,5 @@
-# metalsmith-webpack [![Build Status][travis-badge]][travis]
+# metalsmith-webpack
+[![Build Status][travis-badge]][travis] [![Dependency Status][david-badge]][david] [![devDependency Status][david-dev-badge]][david-dev]
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
@@ -52,6 +53,10 @@ MIT License, see [LICENSE](https://github.com/elliottsj/metalsmith-webpack/blob/
 
 [travis]: https://travis-ci.org/elliottsj/metalsmith-webpack
 [travis-badge]: https://travis-ci.org/elliottsj/metalsmith-webpack.svg?branch=master
+[david]: https://david-dm.org/elliottsj/metalsmith-webpack
+[david-badge]: https://david-dm.org/elliottsj/metalsmith-webpack.svg
+[david-dev]: https://david-dm.org/elliottsj/metalsmith-webpack#info=devDependencies
+[david-dev-badge]: https://david-dm.org/elliottsj/metalsmith-webpack/dev-status.svg
 [metalsmith]: http://www.metalsmith.io/
 [tests]: https://github.com/elliottsj/metalsmith-webpack/blob/master/test/index.js
 [webpack]: http://webpack.github.io/
