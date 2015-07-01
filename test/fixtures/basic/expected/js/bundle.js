@@ -47,8 +47,8 @@
 	var _ = __webpack_require__(1)
 	var arr = __webpack_require__(2)
 
-	var sum = _.reduce(arr, function(memo, val){
-	    return memo + val
+	var sum = _.reduce(arr, function (memo, val) {
+	  return memo + val
 	}, 0)
 
 	console.log(sum)
