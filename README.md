@@ -1,4 +1,6 @@
 # metalsmith-plugin-webpack
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/elliottsj/metalsmith-plugin-webpack.svg)](https://greenkeeper.io/)
 [![Build Status][travis-badge]][travis] [![Dependency Status][david-badge]][david] [![devDependency Status][david-dev-badge]][david-dev]
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
